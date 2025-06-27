@@ -2,61 +2,127 @@
 
 A real-time system to control the Windows mouse cursor using static and dynamic hand gestures, enhancing Human-Computer Interaction (HCI) without the need for direct physical input devices.
 
+---
+
 ## 👨‍💻 Authors
 - Mohammed Ibrahim Shawon  
 - Md. Tahsinur Rahman  
 - Mahreen Tabassum  
 - Nusrat Jahan Ekra  
 
+---
+
 ## 🎯 Abstract
 This project presents a gesture-controlled virtual mouse that utilizes a webcam to recognize human hand gestures and control mouse operations (movement and clicks) in real time. The system requires no external devices and relies on computer vision and machine learning techniques for gesture detection.
 
+---
+
 ## 🧠 System Architecture
-- The system captures real-time video feed using a built-in or external webcam.
-- Using **MediaPipe** and **Computer Vision algorithms**, it detects and classifies hand gestures.
-- Recognized gestures are translated into mouse events:
+
+![System Architecture Diagram](https://github.com/mohammedibrahimshawon/Human_Computer_Interaction_Project/raw/master/1hci.png)
+
+- Captures real-time video feed using a built-in or external webcam.
+- Detects and classifies hand gestures using **MediaPipe** and computer vision algorithms.
+- Translates recognized gestures into mouse events:
   - Cursor movement
   - Left click
   - Right click
   - Double click
 
-> The hand position and recognized gesture control the corresponding mouse event. Colored markers or specific hand postures are used for better gesture tracking.
+> Hand position and recognized gestures control mouse events. Colored markers or specific hand postures improve tracking accuracy.
+
+---
 
 ## 📚 Background and Motivation
-Hand gestures are a natural form of human interaction. Traditional input devices like a mouse or keyboard can be limiting in certain use cases. This system aims to eliminate physical contact, especially useful in:
-- Assistive technologies
-- Smart environments
-- Cleanroom and medical interfaces
 
-Inspired by advances in machine learning, image processing, and low-cost hardware availability, the project showcases the power of intuitive interaction.
+Hand gestures provide a natural form of communication. Traditional input devices like mice and keyboards can be limiting in certain contexts. This system eliminates the need for physical contact, enabling applications in assistive technology, cleanrooms, medical environments, and smart interfaces.
+
+Inspired by advances in machine learning and computer vision, this project leverages low-cost hardware to create intuitive interaction methods.
+
+---
 
 ## 🛠️ Technologies & Libraries Used
-- Python
-- OpenCV
-- MediaPipe (by Google)
-- PyAutoGUI (for cursor control)
-- NumPy
-- pybind11 (C++ binding)
-- Compatible with **Windows OS**
+
+- Python 3.x  
+- OpenCV  
+- MediaPipe (Google)  
+- PyAutoGUI  
+- NumPy  
+- pyttsx3 (text-to-speech, optional)  
+- SpeechRecognition (optional voice commands)  
+- pybind11 (C++ binding for performance)  
+
+---
 
 ## 📊 Evaluation
-- Real-time hand tracking and gesture recognition.
-- Supports both **bare hand gestures** and **colored glove inputs**.
-- High accuracy and responsiveness with minimal hardware requirements.
-- Integrates **voice command support** for extended interaction (e.g., opening apps, system control).
+
+![Gesture Recognition Interface](https://github.com/mohammedibrahimshawon/Human_Computer_Interaction_Project/raw/master/hvi2.png)
+
+- Real-time hand tracking and gesture recognition with high accuracy.  
+- Supports both **bare hand gestures** and **color glove-based detection**.  
+- Integrates voice commands to extend interaction capabilities.  
+- Runs smoothly on Windows platforms with standard webcams.  
+- Improved user experience under different lighting conditions.
+
+---
 
 ## ✅ Features
-- Cursor movement via hand tracking
-- Left, Right, Double click detection
-- Voice command integration
-- No additional hardware required
-- Works in various lighting conditions
-- Two gesture detection modes:
-  - Bare hand (MediaPipe)
-  - Color-glove mode for enhanced precision
 
-## 🧪 How to Run
-1. Clone the repository.
-2. Install the required packages:
+- Mouse cursor movement using hand position.  
+- Left click, right click, and double click recognition via gestures.  
+- Voice command support (optional).  
+- No additional hardware required beyond a webcam.  
+- Two modes for gesture detection:  
+  - Bare hand (MediaPipe)  
+  - Color glove detection for precision.
+
+---
+
+## 🧪 Getting Started
+
+### Prerequisites
+
+- Python 3.x installed on Windows  
+- Webcam connected or built-in
+
+### Installation
+
+1. Clone the repository:
    ```bash
-   pip install -r requirements.txt
+   git clone https://github.com/mohammedibrahimshawon/Human_Computer_Interaction_Project.git
+   cd Human_Computer_Interaction_Project
+
+2. Install required Python packages:
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+
+3 .Running the Application
+bash
+Copy
+Edit
+python gesture_mouse_control.py
+
+####  How to Use
+Position your hand in front of the webcam.
+
+Move your hand to control the mouse cursor.
+
+Use specific hand gestures to perform left click, right click, or double click.
+
+Optionally, use voice commands if enabled.
+
+📖 References
+https://www.sciencedirect.com/science/article/pii/S2351978918304438
+
+https://www.sciencedirect.com/science/article/pii/S2212017316001389
+
+Bankar RT, Salankar SS. Head gesture recognition system using gesture cam, Fifth International Conference on Communication Systems and Network Technologies, 2015.
+
+📝 License
+This project is intended for educational and research purposes. Please contact the authors for collaboration or commercial use.
+
+🧾 Authors' Note
+This project leverages state-of-the-art machine learning and computer vision techniques to improve user interaction with computers by using natural hand gestures, making technology more accessible and intuitive.
